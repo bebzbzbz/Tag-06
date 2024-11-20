@@ -1,0 +1,82 @@
+h1 {
+    font-size: 3em;
+
+    &::first-letter {
+        font-size: 2em;
+        color: #00796B;
+    }
+
+    &:hover {
+        &::first-letter {
+            color: #4FC3F7;
+        }
+    }
+}
+
+ul {
+    li {
+        list-style: none;
+        font-size: 1.5em;
+
+        &:first-of-type, &:nth-of-type(2) {
+            text-decoration: line-through;
+
+            &:before {
+                content: url("../img/check.png");
+            }
+        }
+        &:nth-last-of-type(2), &:last-of-type {
+            text-decoration: underline;
+
+            &:before {
+                content: url("../img/no.png");
+            }
+        }
+        &:nth-of-type(3), &:nth-of-type(4) {
+            background-color: rgb(110, 110, 255);
+
+            &:before {
+                content: url("../img/doing.png")
+            }
+        } 
+
+        &:first-of-type {
+            &::after {
+                content: url("../img/gym.png");
+            }
+        }
+        &:nth-of-type(2) {
+            &::after {
+                content: url("../img/bill.png");
+            }
+        }
+        &:nth-of-type(3) {
+            &::after {
+                content: url("../img/dance.png");
+            }
+        }
+        &:nth-of-type(4) {
+            &::after {
+                content: url("../img/eat.png");
+            }
+        }
+        &:nth-of-type(5) {
+            &::after {
+                content: url("../img/book.png");
+            }
+        }
+        &:last-of-type {
+            &::after {
+                content: url("../img/organize.png");
+            }
+        }
+
+        &::before {
+            margin-right: .5em;
+        }
+
+        &::after {
+            margin-left: .5em;
+        }
+    }
+}
